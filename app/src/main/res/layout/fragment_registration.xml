@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/appCompatTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get Set Yoga!"
+        android:textSize="@dimen/_24ssp"
+        app:layout_constraintBottom_toTopOf="@id/etName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintBottom_toTopOf="@id/tvAge"
+        app:layout_constraintEnd_toStartOf="@id/etName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appCompatTextView" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etName"
+        android:layout_width="@dimen/_160sdp"
+        android:layout_height="wrap_content"
+        android:hint="Enter Your Name"
+        android:singleLine="true"
+        app:layout_constraintBottom_toTopOf="@id/spinnerAge"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvName"
+        app:layout_constraintTop_toBottomOf="@id/appCompatTextView" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Age"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintBottom_toTopOf="@id/tvSlot"
+        app:layout_constraintStart_toStartOf="@id/tvName"
+        app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/spinnerAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/spinnerSlot"
+        app:layout_constraintEnd_toEndOf="@id/etName"
+        app:layout_constraintTop_toBottomOf="@id/etName" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSlot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Slot"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintBottom_toTopOf="@id/tvAmount"
+        app:layout_constraintStart_toStartOf="@id/tvAge"
+        app:layout_constraintTop_toBottomOf="@id/tvAge" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/spinnerSlot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/cbAmount"
+        app:layout_constraintEnd_toEndOf="@id/spinnerAge"
+        app:layout_constraintTop_toBottomOf="@id/spinnerAge" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Monthly Plan"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintBottom_toTopOf="@id/btnRegister"
+        app:layout_constraintStart_toStartOf="@id/tvSlot"
+        app:layout_constraintTop_toBottomOf="@id/tvSlot" />
+
+    <CheckBox
+        android:id="@+id/cbAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="500/-"
+        app:layout_constraintBottom_toTopOf="@id/btnRegister"
+        app:layout_constraintEnd_toEndOf="@id/spinnerSlot"
+        app:layout_constraintTop_toBottomOf="@id/spinnerSlot" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pay &amp; Register"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cbAmount" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.lava.yogaapp.ui.components.auth.AuthFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_auth">
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_yogaFragment"
+            app:destination="@id/yogaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.lava.yogaapp.ui.components.register.RegistrationFragment"
+        android:label="RegisterFragment"
+        tools:layout="@layout/fragment_registration" >
+        <action
+            android:id="@+id/action_registerFragment_to_yogaFragment"
+            app:destination="@id/yogaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/yogaFragment"
+        android:name="com.lava.yogaapp.ui.components.yoga.YogaFragment"
+        android:label="YogaFragment"
+        tools:layout="@layout/fragment_yoga">
+        <action
+            android:id="@+id/action_yogaFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+</navigation>
