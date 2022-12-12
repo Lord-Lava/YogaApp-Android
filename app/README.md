@@ -6,16 +6,16 @@ Android App for booking Yoga Classes
 ### Approach -
 
 - Hosted 3 fragments onto the Base Activity for the Login/Signup, Registration and Yoga Screens.
-- The user is navigated to the appropriate screens after he tries to login/register/singn out based on the jwtAuthToken and isRegistered boolean which depicts whether the user is registered for the yoga class.
+- The user is navigated to the appropriate screens after he tries to login/register/sign out based on the jwtAuthToken and isRegistered boolean which depicts whether the user is registered for the yoga class.
 - The user will only be navigated to the Yoga screen if he's still registered in the backend and thus can only change slots on re registration after his current registration expires at the end of the month.
 - Appropriate API calls are made using the Retrofit2 library and the response is parsed using Moshi.
 - Implemented multithreading using Kotlin Coroutines.
 
 ### Scalability & Concepts Used -
 
-The app is built strictly using the Clean Architechture guidelines with MVVM and demonstrates the following concepts -
+The app is built strictly using the Clean Architecture guidelines with MVVM and demonstrates the following concepts -
 - Dependency Injection using Dagger Hilt
-- Seperation of concerns
+- Separation of concerns
 - Singleton and DAO design patterns.
 - Observer Pattern using LiveData and Kotlin-Flow
 - SOLID principles
@@ -47,8 +47,8 @@ It also uses and builds on the following techniques:
 - Thus, if the appetize link doesn't work, try using this google drive [link](https://drive.google.com/drive/folders/1pXqYDPhowaVMHW5A4Ye_IKv2csD9d12p?usp=sharing) to get the debug APK of the app which can be installed on any android device.
 ## My Learnings
 
-- Learnt to build a highly scalabe android application using the Clean architecture with MVVM and dependency injection.
-- Learnt to apply SOLID principles in praticality.
+- Learnt to build a highly scalable android application using the Clean architecture with MVVM and dependency injection.
+- Learnt to apply SOLID principles in practicality.
 ## Authors
 
 - [@Lord-Lava](https://github.com/Lord-Lava/)
